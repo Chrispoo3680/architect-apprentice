@@ -1,0 +1,20 @@
+name: CI
+on:
+  push:
+  pull_request:
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Validate shell scripts
+        run: |
+          bash -n scripts/install.sh
+          bash -n scripts/uninstall.sh
+      - name: Required files
+        run: |
+          test -f SKILL.md
+          test -f README.md
+          test -f VERSION
+          grep -q '^name: architect-apprentice$' SKILL.md

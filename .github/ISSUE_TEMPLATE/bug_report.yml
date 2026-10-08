@@ -1,0 +1,17 @@
+name: Workflow bug
+about: Report behavior that undermines the learning workflow
+title: "[bug] "
+body:
+  - type: textarea
+    attributes:
+      label: What happened?
+    validations:
+      required: true
+  - type: textarea
+    attributes:
+      label: What should have happened?
+    validations:
+      required: true
+  - type: textarea
+    attributes:
+      label: Reproduction scenario

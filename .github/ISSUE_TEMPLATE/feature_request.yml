@@ -1,0 +1,12 @@
+name: Improvement
+about: Suggest a learning-workflow improvement
+title: "[idea] "
+body:
+  - type: textarea
+    attributes:
+      label: Learning problem
+    validations:
+      required: true
+  - type: textarea
+    attributes:
+      label: Proposed change
